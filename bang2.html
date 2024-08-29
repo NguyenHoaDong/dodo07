@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bảng Nhật Ký</title>
+    <style>
+        .info-container {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        #memberSelect {
+            display: block;
+        }
+
+        #memberSelect:focus + .info-container {
+            max-height: 300px; /* Set a maximum height that is big enough to fit the content */
+            opacity: 1;
+        }
+
+        /* Specific styles for each member info */
+        #LanAnh:target,
+        #Dong:target,
+        #Tam:target,
+        #Bao:target,
+        #Minh:target {
+            max-height: 300px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <p>Nhật kí</p>
+    </div>
+
+    <div class="container">
+        <div class="main-table">
+            <table>
+                <tr>
+                    <td><a href="#Loptruong">Lớp trưởng</a></td>
+                    <td><a href="#Loppho">Lớp phó</a></td>
+                    <td><a href="#Totruong">Tổ trưởng</a></td>
+                    <td>
+                        Thành viên
+                        <select id="memberSelect">
+                            <option value="">Chọn thành viên</option>
+                            <option value="LanAnh">Lan Anh</option>
+                            <option value="Dong">Đông</option>
+                            <option value="Tam">Tâm</option>
+                            <option value="Bao">Bảo</option>
+                            <option value="Minh">Minh</option>
+                        </select>
+                    </td>
+                    <td><a href="#" class="button">← Back</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="Loptruong" class="info-container">
+            <h2>Thông Tin Chi Tiết</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Thông Tin</th>
+                        <th>Chi tiết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chức</td>
+                        <td>Lớp trưởng</td>
+                    </tr>
+                    <tr>
+                        <td>Họ Tên</td>
+                        <td>Đông</td>
+                    </tr>
+                    <tr>
+                        <td>Ngày Sinh</td>
+                        <td>25/05/2007</td>
+                    </tr>
+                    <tr>
+                        <td>Sở Thích</td>
+                        <td>Chơi Football</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="Loppho" class="info-container">
+            <h2>Thông Tin Chi Tiết</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Thông Tin</th>
+                        <th>Chi Tiết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chức</td>
+                        <td>Lớp phó</td>
+                    </tr>
+                    <tr>
+                        <td>Họ Tên</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Ngày Sinh</td>
+                        <td>02/02/2007</td>
+                    </tr>
+                    <tr>
+                        <td>Sở Thích</td>
+                        <td>Đọc sách</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="Totruong" class="info-container">
+            <h2>Thông Tin Chi Tiết</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Thông Tin</th>
+                        <th>Chi Tiết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chức</td>
+                        <td>Tổ trưởng</td>
+                    </tr>
+                    <tr>
+                        <td>Họ Tên</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>Ngày Sinh</td>
+                        <td>03/03/2007</td>
+                    </tr>
+                    <tr>
+                        <td>Sở Thích</td>
+                        <td>Chơi bóng đá</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="LanAnh" class="info-container">
+            <h2>Thông Tin Chi Tiết</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Thông Tin</th>
+                        <th>Chi Tiết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chức</td>
+                        <td>Thành viên</td>
+                    </tr>
+                    <tr>
+                        <td>Họ Tên</td>
+                        <td>Lan Anh</td>
+                    </tr>
+                    <tr>
+                        <td>Ngày Sinh</td>
+                        <td>02/02/2007</td>
+                    </tr>
+                    <tr>
+                        <td>Sở Thích</td>
+                        <td>Đọc sách</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="Dong" class="info-container">
+            <h2>Thông Tin Chi Tiết</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Thông Tin</th>
+                        <th>Chi tiết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chức</td>
+                        <td>Lớp trưởng</td>
+                    </tr>
+                    <tr>
+                        <td>Họ Tên</td>
+                        <td>Đông</td>
+                    </tr>
+                    <tr>
+                        <td>Ngày Sinh</td>
+                        <td>25/05/2007</td>
+                    </tr>
+                    <tr>
+                        <td>Sở Thích</td>
+                        <td>Chơi Football</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="Tam" class="info-container">
+            <h2>Thông Tin Chi Tiết</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Thông Tin</th>
+                        <th>Chi Tiết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chức</td>
+                        <td>Thành viên</td>
+                    </tr>
+                    <tr>
+                        <td>Họ Tên</td>
+                        <td>Tâm</td>
+                    </tr>
+                    <tr>
+                        <td>Ngày Sinh</td>
+                        <td>02/02/2008</td>
+                    </tr>
+                    <tr>
+                        <td>Sở Thích</td>
+                        <td>Đọc sách</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="Bao" class="info-container">
+            <h2>Thông Tin Chi Tiết</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Thông Tin</th>
+                        <th>Chi Tiết</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chức</td>
+                        <td>Thành viên</td>
+                    </tr>
+                    <tr>
+                        <td>Họ Tên</td>
+                        <td>Bảo</td>
+                    </tr>
+                    <tr>
+                        <td>Ngày Sinh</td>
+                        <td>02/02/2007</td>
+                    </tr>
+                    <tr>
+                        <td>Sở Thích</td>
+                        <td>Đọc sách</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="Minh" class="info-container">
+            <h2>
